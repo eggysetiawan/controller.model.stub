@@ -57,7 +57,7 @@ class {{ class }} extends Controller
             Log::info("Failed to add {{ model }} : {$e->getMessage()}");
             $session = ['success', __('Failed to add {{ model }}')];
         }
-        session()->flash($sesion[0], $session[1]);
+        session()->flash($session[0], $session[1]);
         return Redirect::to();
     }
 
@@ -104,7 +104,7 @@ class {{ class }} extends Controller
             Log::info("Failed to update {{ model }} : {$e->getMessage()}");
             $session = ['success', __('Failed to update {{ model }}')];
         }
-        session()->flash($sesion[0], $session[1]);
+        session()->flash($session[0], $session[1]);
         return redirect()->route();
     }
 
@@ -126,7 +126,7 @@ class {{ class }} extends Controller
             Log::info("Failed to delete {{ model }} : {$e->getMessage()}");
             $session = ['error', __('Failed to update {{ model }}')];
         }
-        session()->flash($sesion[0], $session[1]);
+        session()->flash($session[0], $session[1]);
         return back();
     }
 }
